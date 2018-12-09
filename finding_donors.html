@@ -12996,14 +12996,14 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39;, &#39;make_scorer&#39;, and any other necessary libraries</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">GridSearchCV</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">make_scorer</span><span class="p">,</span><span class="n">fbeta_score</span>
 <span class="c1"># TODO: Initialize the classifier</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">()</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="c1"># TODO: Create the parameters list you wish to tune, using a dictionary if needed.</span>
 <span class="c1"># HINT: parameters = {&#39;parameter_1&#39;: [value1, value2], &#39;parameter_2&#39;: [value1, value2]}</span>
@@ -13051,19 +13051,18 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <pre>RandomForestClassifier(bootstrap=True, class_weight=None, criterion=&#39;gini&#39;,
             max_depth=15, max_features=&#39;auto&#39;, max_leaf_nodes=70,
             min_impurity_decrease=0.0, min_impurity_split=None,
-            min_samples_leaf=8, min_samples_split=2,
+            min_samples_leaf=20, min_samples_split=2,
             min_weight_fraction_leaf=0.0, n_estimators=15, n_jobs=1,
-            oob_score=False, random_state=None, verbose=0,
-            warm_start=False)
+            oob_score=False, random_state=10, verbose=0, warm_start=False)
 Unoptimized model
 ------
-Accuracy score on testing data: 0.8345
-F-score on testing data: 0.6637
+Accuracy score on testing data: 0.8371
+F-score on testing data: 0.6707
 
 Optimized Model
 ------
-Final accuracy score on the testing data: 0.8515
-Final F-score on the testing data: 0.7128
+Final accuracy score on the testing data: 0.8516
+Final F-score on the testing data: 0.7169
 </pre>
 </div>
 </div>
@@ -13100,13 +13099,13 @@ Final F-score on the testing data: 0.7128
 <tbody>
 <tr>
 <td style="text-align:center">Accuracy Score</td>
-<td style="text-align:center">0.8345</td>
-<td style="text-align:center">0.8515</td>
+<td style="text-align:center">0.8371</td>
+<td style="text-align:center">0.8516</td>
 </tr>
 <tr>
 <td style="text-align:center">F-score</td>
-<td style="text-align:center">0.6637</td>
-<td style="text-align:center">0.7128</td>
+<td style="text-align:center">0.6707</td>
+<td style="text-align:center">0.7169</td>
 </tr>
 </tbody>
 </table>
@@ -13120,7 +13119,7 @@ Final F-score on the testing data: 0.7128
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ul>
-<li>Optimized Model : Accuracy = 0.8515 and F-Score= 0.7128</li>
+<li>Optimized Model : Accuracy = 0.8516 and F-Score= 0.7169</li>
 <li>Yes, these are better than unoptimized model</li>
 <li>The optimized model results are too better than the naive predictor model</li>
 </ul>
@@ -13354,6 +13353,40 @@ F-score on testing data: 0.6702
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!!</span>jupyter nbconvert *.ipynb
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;[NbConvertApp] Converting notebook finding_donors.ipynb to html&#39;,
+ &#39;[NbConvertApp] Writing 468676 bytes to finding_donors.html&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
